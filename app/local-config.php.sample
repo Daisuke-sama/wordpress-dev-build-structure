@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Pavel_Burylichau
+ * Date: 26-Feb-18
+ * Time: 2:14 PM
+ */
+
+define( 'DB_NAME', '%%DB_NAME%%' );
+define( 'DB_USER', '%%DB_USER%%' );
+define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
+define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+
+ini_set( 'display_errors', true );
+define( 'WP_DEBUG_DISPLAY', true );
+
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );

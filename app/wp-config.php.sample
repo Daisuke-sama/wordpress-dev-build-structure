@@ -1,0 +1,61 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Pavel_Burylichau
+ * Date: 26-Feb-18
+ * Time: 2:15 PM
+ */
+
+if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
+	define( 'WP_LOCAL_DEV', true );
+	include( dirname( __FILE__ ) . '/local-config.php' );
+} else {
+	define( 'WP_LOCAL_DEV', false );
+	define( 'DB_NAME', '%%DB_NAME%%' );
+	define( 'DB_USER', '%%DB_USER%%' );
+	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
+	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
+
+	ini_set( 'display_errors', 0 );
+	define( 'WP_DEBUG_DISPLAY', false );
+
+	define( 'AUTH_KEY',         'put your unique phrase here' );
+	define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+	define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+	define( 'NONCE_KEY',        'put your unique phrase here' );
+	define( 'AUTH_SALT',        'put your unique phrase here' );
+	define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+	define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+	define( 'NONCE_SALT',       'put your unique phrase here' );
+}
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define('WP_DEBUG', false);
+
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
