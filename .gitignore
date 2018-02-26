@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### WordPress template
+*.log
+
+vendor/
+node_modules/
+
+app/wp/
+app/content/plugins/advanced-custom-fields/
+
+app/local-config.php
+app/wp-config.php
+app/wp/.htaccess
+app/wp/license.txt
+app/wp/readme.html
+app/wp/sitemap.xml
+app/wp/sitemap.xml.gzapp/wp/
